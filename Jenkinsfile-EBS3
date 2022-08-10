@@ -30,7 +30,6 @@ pipeline {
         }
 
         stage('Push') {
-
             steps {
                 sh 'docker push robaalmehmadi/runway:latest'
             }
