@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t robaalmehmadi/runaway:latest .'
+				sh 'docker build -t robaalmehmadi/runaway-game:latest .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push robaalmehmadi/runaway:latest'
+				sh 'docker push robaalmehmadi/runaway-game:latest'
 			}
 		}
 	}
