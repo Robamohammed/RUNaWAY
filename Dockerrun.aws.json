@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "registry.hub.docker.com/robaalmehmadi/runaway-game:latest"
+      "Name": "registry.hub.docker.com/robaalmehmadi/runway:latest"
     },
     "Ports": [
       {
