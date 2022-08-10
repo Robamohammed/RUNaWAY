@@ -28,12 +28,12 @@ pipeline{
 				sh 'docker push robaalmehmadi/runway:latest'
 			}
 		}
-	}
 
-	post {
-		always {
-			sh 'docker logout'
-		}
+        stage ("Logout") {
+            steps {
+                sh 'docker logout'
+            }
+        }
 	}
-
 }
+	 
