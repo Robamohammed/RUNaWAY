@@ -30,10 +30,10 @@ pipeline{
 		}
 	}
 
-	stage ("Logout") {
-        steps {
-            sh 'docker logout'
-            }
-        }
+	stage {
+		always {
+			sh 'docker logout'
+		}
+	}
 
 }
