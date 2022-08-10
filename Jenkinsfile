@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t robaalmehmadi/2048:latest .'
+				sh 'docker build -t robaalmehmadi/runaway:latest .'
 			}
 		}
 
@@ -25,15 +25,15 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push robaalmehmadi/2048:latest'
+				sh 'docker push robaalmehmadi/runaway:latest'
 			}
 		}
 	}
 
-	post {
-		always {
-			sh 'docker logout'
-		}
-	}
+	stage ("Logout") {
+        steps {
+            sh 'docker logout'
+            }
+        }
 
 }
